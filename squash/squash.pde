@@ -1,8 +1,9 @@
 
-void setup(){
-  size(320,640);
+void setup() {
+  size(320, 640);
 }
 
-void draw(){
+void draw() {
   background(0);
+  paddle();
 }
