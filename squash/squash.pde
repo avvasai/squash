@@ -12,10 +12,14 @@ void draw() {
     //For one ball- display,check if touches edges , check if collides, score.
     b.display();
     //need on for movement called b.move- should also include accelerate
-    //b.edge();
+    //b.pop
+    b.move();
+    b.edge();
     //b.collision();
   } else {
     println("The game is paused");
+    b.display();
+    paddle();
   }
 }
 
