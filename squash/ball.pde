@@ -24,5 +24,11 @@ class ball {
       spaceY = spaceY * -1;
     }
   }
+  void collision(){
+  
+  }
+  void pop(){
+    
+  }
 
 }
