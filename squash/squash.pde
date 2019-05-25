@@ -5,10 +5,12 @@ void setup() {
   b = new ball();
   p = new paddle();
   size(320, 640);
+  
 }
 
 void draw() {
   background(0);
+  popline();
   if (going) {
     p.display();
     //For one ball- display,check if touches edges , check if collides, score.
@@ -22,6 +24,7 @@ void draw() {
     println("The game is paused");
     b.display();
     p.display();
+    popline();
   }
 }
 
