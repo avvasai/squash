@@ -7,18 +7,18 @@ void setup() {
 
 void draw() {
   background(0);
-  if (going){
-  paddle();
-  //For one ball- display,check if touches edges , check if collides, score.
-  b.display();
-  //b.edge();
-  //b.collision();
-  }
-  else{
-   println("The game is paused"); 
+  if (going) {
+    paddle();
+    //For one ball- display,check if touches edges , check if collides, score.
+    b.display();
+    //need on for movement called b.move- should also include accelerate
+    //b.edge();
+    //b.collision();
+  } else {
+    println("The game is paused");
   }
 }
 
-void mousePressed(){
- going =! going; 
+void mousePressed() {
+  going =! going;
 }
