@@ -3,12 +3,9 @@ class ball {
   int circleY;
   int spaceX = 1;
   int spaceY = 1;
-  boolean 
-  //Make a constructor for acceptin the value of collision
-  ball(boolean temp) {
-  
-  
-  
+  boolean collision;
+  void coll_dist() {
+    final_dist = dist(circleX, circleY, mouseX, 600);
   }
   void display() {
     if (going) {
@@ -27,7 +24,7 @@ class ball {
         ellipse(temp, height, size, size);
         size = size - 5;
       }
-      println("Game Over");
+      println("Game Over, Your score was:" + score);
       going = false;
     }
   }
@@ -48,8 +45,8 @@ class ball {
     }
   }
   void bounce() {
-    if (collision(final_dist , comp) == false ) {
-      println("false");
+    if ( collision == false ) {
+      //println("false");
     } else {
       println("true");
       score++;
@@ -58,4 +55,11 @@ class ball {
     }
   }
 
+  void collison() {
+    if (final_dist > comp) {
+      collision = false ;
+    } else {
+      collision = true ;
+    }
+  }
 }

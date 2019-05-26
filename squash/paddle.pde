@@ -24,11 +24,3 @@ void popline() {
   line(0, height, width, height);
   //line(width/2,0,width/2,height);
 }
-
-boolean collision(float dist, float comp) {
-  if (dist > comp) {
-    return false;
-  } else {
-    return true;
-  }
-}
