@@ -3,6 +3,13 @@ class ball {
   int circleY;
   int spaceX = 1;
   int spaceY = 1;
+  boolean 
+  //Make a constructor for acceptin the value of collision
+  ball(boolean temp) {
+  
+  
+  
+  }
   void display() {
     if (going) {
       ellipseMode(CENTER);
@@ -40,16 +47,15 @@ class ball {
       pop();
     }
   }
-  //void bounce(){
-  // if (collision()){
-     
-  // }
-  //}
-  boolean collision(float dist, float comp) {
-    if (dist > comp) {
-      return false;
+  void bounce() {
+    if (collision(final_dist , comp) == false ) {
+      println("false");
     } else {
-      return true;
+      println("true");
+      score++;
+      spaceX = spaceX * -1;
+      spaceY = spaceY * -1;
     }
   }
+
 }

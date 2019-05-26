@@ -1,6 +1,7 @@
-boolean going;
+boolean going = false;
 ball b;
 paddle p;
+float comp = 17.5;
 int score = 0;
 void setup() {
   b = new ball();
@@ -10,17 +11,16 @@ void setup() {
 }
 
 void draw() {
+  float final_dist = dist(b.circleX, b.circleY, mouseX, 600);
   background(0);
   popline();
   if (going) {
     p.display();
-    //For one ball- display,check if touches edges , check if collides, score.
     b.display();
-    //need on for movement called b.move- should also include accelerate
-    //b.pop
+    b.pop();
     b.move();
     b.edge();
-    //b.collision();
+    
   } else {
     b.display();
     p.display();
