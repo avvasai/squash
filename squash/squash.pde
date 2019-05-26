@@ -1,11 +1,12 @@
 boolean going;
 ball b;
 paddle p;
+int score = 0;
 void setup() {
   b = new ball();
   p = new paddle();
   size(320, 640);
-  
+  println("Click to begin the game");
 }
 
 void draw() {
@@ -21,7 +22,6 @@ void draw() {
     b.edge();
     //b.collision();
   } else {
-    println("The game is paused");
     b.display();
     p.display();
     popline();
