@@ -17,3 +17,10 @@ class paddle {
     }
   }
 }
+
+void popline() {
+  strokeWeight(2);
+  stroke(255);
+  line(0, height, width, height);
+  //line(width/2,0,width/2,height);
+}
